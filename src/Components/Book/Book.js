@@ -34,7 +34,7 @@ const Book = () => {
       userEmail: user.email,
       phoneNumber: phoneRef.current.value,
       eventTitle: event.title,
-      status: "pending",
+      status: "Pending",
       img: event.img,
     };
     axios
@@ -58,7 +58,7 @@ const Book = () => {
           <h2>{event.title}</h2>
           <img src={event.img} alt="" className="img-fluid" />
           <p>{event.description}</p>
-          <p>{event.price}</p>
+          <p>Price : ${event.price}</p>
         </Col>
         <Col>
           <h2>Booking information</h2>

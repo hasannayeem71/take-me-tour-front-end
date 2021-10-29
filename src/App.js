@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import About from "./Components/About/About";
 import AddPackage from "./Components/AddPackage/AddPackage";
 import Book from "./Components/Book/Book";
 import DeletePackage from "./Components/DeletePackage/DeletePackage";
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/about">
+              <About />
             </Route>
             <PrivateRoute path="/package/book/:id">
               <Book />

@@ -44,16 +44,14 @@ const MyPackage = () => {
             <div key={mypk._id}>
               <Col className="my-package-card">
                 <Card>
-                  <div className="d-flex justify-content-around">
-                    <img src={mypk.img} alt="" className="my-pack-img" />
-                    <div className="detail-in-my-package">
-                      <h4>{mypk.eventTitle}</h4>
-                      <small>Status: {mypk.status}</small>
-                      <br />
-                      <button onClick={() => handleCancel(mypk._id)}>
-                        Cancel
-                      </button>
-                    </div>
+                  <img src={mypk.img} alt="" className="" />
+                  <div className="detail-in-my-package">
+                    <h4>{mypk.eventTitle}</h4>
+                    <small>Status: {mypk.status}</small>
+                    <br />
+                    <button onClick={() => handleCancel(mypk._id)}>
+                      Cancel
+                    </button>
                   </div>
                 </Card>
               </Col>

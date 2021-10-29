@@ -50,13 +50,16 @@ const HeaderNav = () => {
                   Delete Package
                 </Nav.Link>
               )}
+              <Nav.Link as={Link} to="/about">
+                About
+              </Nav.Link>
             </Nav>
             {user ? (
               <div>
                 <button onClick={logOut} className="login-logout">
                   LOGOUT <i className="fas fa-sign-in-alt"></i>
                 </button>
-                {/* <span>{user.displayName?.slice(0, 9)}..</span> */}
+                <span>{user.displayName}</span>
               </div>
             ) : (
               <div>

@@ -24,9 +24,14 @@ const Login = () => {
       });
   };
   return (
-    <div className="login-page d-flex justify-content-center align-items-center">
-      <div className="login-canvas">
-        <button onClick={handleLogin}>Google login</button>
+    <div>
+      <h2>LOGIN</h2>
+      <div className="login-page d-flex justify-content-center align-items-center">
+        <div className="login-canvas d-flex justify-content-center align-items-center">
+          <button onClick={handleLogin}>
+            <i className="fab fa-google me-2"></i>Google login
+          </button>
+        </div>
       </div>
     </div>
   );

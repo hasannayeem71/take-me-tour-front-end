@@ -46,7 +46,7 @@ const DeletePackage = () => {
               <td>{onePackage.title}</td>
               <td>{onePackage.date}</td>
               <td>{onePackage.description?.slice(0, 25)}..</td>
-              <td>{onePackage.price}</td>
+              <td>${onePackage.price}</td>
               <td>
                 <i
                   className="fas fa-trash-alt text-danger"

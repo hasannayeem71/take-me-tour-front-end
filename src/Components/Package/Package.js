@@ -10,7 +10,7 @@ const Package = ({ pack }) => {
       <Card className="home-card">
         <img src={img} alt="" className="home-page-card-img" />
         <h1>{title}</h1>
-        <p className="text-left">{description}</p>
+        <p className="text-left">{description?.slice(0, 50)}</p>
         <button onClick={() => history.push(`/package/book/${_id}`)}>
           Book Now
         </button>

@@ -25,7 +25,7 @@ const Home = () => {
         />
       </div>
       <div>
-        <h3>Best-selling Holiday Destinations</h3>
+        <h1 className="mb-5">Best-selling Holiday Destinations</h1>
         <Row xs={1} md={4} className="g-4 ">
           {
             packages.map((pack) => (

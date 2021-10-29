@@ -1,7 +1,12 @@
 .login-page {
-  height: 50vh;
-  background-color: violet;
+  /* background-color: rgb(152, 238, 130); */
+  padding: 10%;
+  padding-top: 0px;
 }
 .login-canvas {
-  background-color: turquoise;
+  height: 50vh;
+  width: 50vw;
+  box-shadow: 5px 5px 26px -5px #000000;
+  border-radius: 20px;
+  background-color: #f960a017;
 }
