@@ -1,0 +1,21 @@
+.book-now-btn {
+  outline: none;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: #4ca9fd;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+button:hover {
+  background-color: #228fee;
+}
+.home-card {
+  border-radius: 10px;
+}
+.home-page-card-img {
+  border-radius: 20px;
+  padding: 10px;
+}

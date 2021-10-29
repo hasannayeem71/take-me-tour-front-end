@@ -4,7 +4,7 @@ import { Col, Modal, Row } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import CustomLoader from "../CustomLoader/CustomLoader";
-
+import "./Book.css";
 const Book = () => {
   const { id } = useParams();
   const uri = `http://localhost:5000/packages/${id}`;
@@ -50,41 +50,65 @@ const Book = () => {
     return <CustomLoader />;
   }
   return (
-    <div className="container">
+    <div className="container  pt-5">
       <Row xs={1} md={2} className="g-4">
-        <Col>
-          <img src={event.img} alt="" />
-          <p>{event.title}</p>
+        <Col className="booking-details">
+          <h2>{event.title}</h2>
+          <img src={event.img} alt="" className="img-fluid" />
+          <p>{event.description}</p>
           <p>{event.price}</p>
         </Col>
         <Col>
-          <h4>Booking information</h4>
-          <form onSubmit={handleOrder} className="d-flex flex-column">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" value={user.displayName} readOnly />
-            <label htmlFor="email">Email</label>
-            <input type="text" value={user.email} readOnly />
-            <input
-              type="number"
-              placeholder="Phone Number"
-              ref={phoneRef}
-              required
-            />
-            <label htmlFor="ename">Event Name</label>
-            <input
-              type="text"
-              name="ename"
-              placeholder="Event name"
-              value={event.title || ""}
-              readOnly
-            />
-            <input
-              type="text"
-              placeholder="price"
-              value={event.price || ""}
-              readOnly
-            />
-            <input type="submit" value="submit" />
+          <h2>Booking information</h2>
+          <form onSubmit={handleOrder} className=" booking-form">
+            <div className="single-input">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                value={user.displayName}
+                readOnly
+              />
+            </div>
+            <div className="single-input">
+              <label htmlFor="email">Email</label>
+              <input type="text" value={user.email} readOnly />
+            </div>
+            <div className="single-input">
+              <label htmlFor="phone">Phone</label>
+              <input
+                type="number"
+                name="phone"
+                placeholder="Phone Number"
+                ref={phoneRef}
+                required
+              />
+            </div>
+            <div className="single-input">
+              <label htmlFor="ename">Event</label>
+              <input
+                type="text"
+                name="ename"
+                placeholder="Event name"
+                value={event.title || ""}
+                readOnly
+              />
+            </div>
+            <div className="single-input">
+              <label htmlFor="price">Price</label>
+              <input
+                name="price"
+                type="text"
+                placeholder="price"
+                value={event.price || ""}
+                readOnly
+              />
+            </div>
+            <div className="single-input">
+              <button type="submit" value="submit">
+                Confirm Booking
+              </button>
+            </div>
           </form>
         </Col>
       </Row>

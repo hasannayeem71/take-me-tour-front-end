@@ -26,7 +26,7 @@ const DeletePackage = () => {
     return <CustomLoader />;
   }
   return (
-    <div className="container">
+    <div className="container" style={{ minHeight: "70vh" }}>
       <h4>DELETE PACKAGE</h4>
       <Table striped bordered hover responsive>
         <thead>

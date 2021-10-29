@@ -68,7 +68,7 @@ const ManageAll = () => {
     return <CustomLoader />;
   }
   return (
-    <div className="d-flex justify-content-between align-items-center">
+    <div className="" style={{ minHeight: "70vh" }}>
       <div className="container-fluid">
         <h2>Manage all package that user choose</h2>
         <Table striped bordered responsive hover>

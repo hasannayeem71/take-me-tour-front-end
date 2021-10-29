@@ -3,6 +3,7 @@ import "./App.css";
 import AddPackage from "./Components/AddPackage/AddPackage";
 import Book from "./Components/Book/Book";
 import DeletePackage from "./Components/DeletePackage/DeletePackage";
+import Footer from "./Components/Footer/Footer";
 import HeaderNav from "./Components/HeaderNav/HeaderNav";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
@@ -47,6 +48,7 @@ function App() {
               <NotFoundCustom />
             </Route>
           </Switch>
+          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </div>

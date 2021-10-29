@@ -1,0 +1,18 @@
+.my-package-card {
+  box-shadow: 5px 5px 15px 3px gray;
+  border-radius: 20px;
+}
+.detail-in-my-package {
+  padding: 3%;
+}
+.detail-in-my-package button {
+  margin-top: 85%;
+  background-color: red;
+}
+.my-pack-img {
+  width: 30%;
+  padding: 0.7rem;
+  padding-left: 0;
+  border-radius: 20px;
+  margin-right: 5%;
+}

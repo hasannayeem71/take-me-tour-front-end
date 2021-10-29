@@ -16,9 +16,16 @@ const Home = () => {
     return <CustomLoader />;
   }
   return (
-    <div className="container">
-      aikhane slider bosbe
+    <div className="container mb-3">
+      <div className="mt-5 mb-4">
+        <img
+          src="https://indiater.com/wp-content/uploads/2019/02/free-travel-facebook-timeline-cover-banner-psd-template.jpg"
+          alt=""
+          className="w-100"
+        />
+      </div>
       <div>
+        <h3>Best-selling Holiday Destinations</h3>
         <Row xs={1} md={4} className="g-4 ">
           {
             packages.map((pack) => (
