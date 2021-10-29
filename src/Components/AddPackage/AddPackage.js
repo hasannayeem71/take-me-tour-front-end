@@ -36,17 +36,19 @@ const AddPackage = () => {
       };
 
       //post this data to api
-      axios.post("http://localhost:5000/packages", event).then((res) => {
-        if (res.data.acknowledged) {
-          setMessage("Package Successfully added");
-          setSmShow(true);
-          titleRef.current.value = "";
-          dateRef.current.value = "";
-          descriptionRef.current.value = "";
-          imgRef.current.value = "";
-          priceRef.current.value = "";
-        }
-      });
+      axios
+        .post("https://take-me-tour.herokuapp.com/packages", event)
+        .then((res) => {
+          if (res.data.acknowledged) {
+            setMessage("Package Successfully added");
+            setSmShow(true);
+            titleRef.current.value = "";
+            dateRef.current.value = "";
+            descriptionRef.current.value = "";
+            imgRef.current.value = "";
+            priceRef.current.value = "";
+          }
+        });
     }
   };
   return (

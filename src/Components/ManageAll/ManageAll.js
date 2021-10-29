@@ -9,7 +9,7 @@ const ManageAll = () => {
   useEffect(() => {
     document.title = "Manage-All";
     axios
-      .get("http://localhost:5000/user/package")
+      .get("https://take-me-tour.herokuapp.com/user/package")
       .then((res) => setAllPackage(res.data));
   }, []);
 
@@ -31,7 +31,7 @@ const ManageAll = () => {
 
     axios
       .put(
-        `http://localhost:5000/user/package/update/${service._id}`,
+        `https://take-me-tour.herokuapp.com/user/package/update/${service._id}`,
         updatedPackage
       )
       .then((res) => {
@@ -55,7 +55,7 @@ const ManageAll = () => {
       return;
     }
     axios
-      .delete(`http://localhost:5000/user/package/delete/${id}`)
+      .delete(`https://take-me-tour.herokuapp.com/user/package/delete/${id}`)
       .then((res) => {
         if (res.data.acknowledged) {
           alert("Successfully deleted");

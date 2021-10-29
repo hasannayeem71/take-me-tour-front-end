@@ -7,7 +7,7 @@ import CustomLoader from "../CustomLoader/CustomLoader";
 import "./Book.css";
 const Book = () => {
   const { id } = useParams();
-  const uri = `http://localhost:5000/packages/${id}`;
+  const uri = `https://take-me-tour.herokuapp.com/packages/${id}`;
   const [event, setEvent] = useState({});
   const phoneRef = useRef();
   const { user } = useAuth();
@@ -37,13 +37,15 @@ const Book = () => {
       status: "pending",
       img: event.img,
     };
-    axios.post("http://localhost:5000/user/package/book", data).then((res) => {
-      if (res.data.acknowledged) {
-        setMessage("Package Successfully Added");
-        setSmShow(true);
-        phoneRef.current.value = "";
-      }
-    });
+    axios
+      .post("https://take-me-tour.herokuapp.com/user/package/book", data)
+      .then((res) => {
+        if (res.data.acknowledged) {
+          setMessage("Package Successfully Added");
+          setSmShow(true);
+          phoneRef.current.value = "";
+        }
+      });
     e.preventDefault();
   };
   if (!event._id) {

@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     document.title = "Home";
     axios
-      .get("http://localhost:5000/packages")
+      .get("https://take-me-tour.herokuapp.com/packages")
       .then((res) => setPackages(res.data));
   }, []);
   if (packages.length === 0) {

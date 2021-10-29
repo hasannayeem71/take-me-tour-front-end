@@ -10,7 +10,9 @@ const MyPackage = () => {
   useEffect(() => {
     document.title = "My-Packages";
     axios
-      .post(`http://localhost:5000/user/package?email=${user.email}`)
+      .post(
+        `https://take-me-tour.herokuapp.com/user/package?email=${user.email}`
+      )
       .then((res) => {
         setMyPackage(res.data);
       });
@@ -22,7 +24,7 @@ const MyPackage = () => {
       return;
     }
     axios
-      .delete(`http://localhost:5000/user/package/delete/${id}`)
+      .delete(`https://take-me-tour.herokuapp.com/user/package/delete/${id}`)
       .then((res) => {
         if (res.data.acknowledged) {
           alert("Successfully Canceled");

@@ -10,17 +10,19 @@ const DeletePackage = () => {
   const [id, setId] = useState("");
   useEffect(() => {
     document.title = "Delete-Package";
-    axios.get("http://localhost:5000/packages").then((res) => {
+    axios.get("https://take-me-tour.herokuapp.com/packages").then((res) => {
       setAllPackage(res.data);
     });
   }, []);
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/packages/${id}`).then((res) => {
-      if (res.data) {
-        setSmShow(false);
-        setAllPackage(allPackage.filter((pk) => pk._id !== id));
-      }
-    });
+    axios
+      .delete(`https://take-me-tour.herokuapp.com/packages/${id}`)
+      .then((res) => {
+        if (res.data) {
+          setSmShow(false);
+          setAllPackage(allPackage.filter((pk) => pk._id !== id));
+        }
+      });
   };
   if (allPackage.length === 0) {
     return <CustomLoader />;
