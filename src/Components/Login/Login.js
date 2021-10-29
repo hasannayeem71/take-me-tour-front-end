@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../../hooks/useAuth";
-
+import "./Login.css";
 const Login = () => {
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
   const { signInUsingGoogle, setIsLoading } = useAuth();
 
   const history = useHistory();
@@ -21,8 +24,10 @@ const Login = () => {
       });
   };
   return (
-    <div>
-      <button onClick={handleLogin}>Google login</button>
+    <div className="login-page d-flex justify-content-center align-items-center">
+      <div className="login-canvas">
+        <button onClick={handleLogin}>Google login</button>
+      </div>
     </div>
   );
 };

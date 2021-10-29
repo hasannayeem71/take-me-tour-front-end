@@ -1,9 +1,13 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
-import CustomLoader from "./Components/CustomLoader/CustomLoader";
+import AddPackage from "./Components/AddPackage/AddPackage";
+import Book from "./Components/Book/Book";
+import DeletePackage from "./Components/DeletePackage/DeletePackage";
 import HeaderNav from "./Components/HeaderNav/HeaderNav";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import ManageAll from "./Components/ManageAll/ManageAll";
+import MyPackage from "./Components/MyPackage/MyPackage";
 import NotFoundCustom from "./Components/NotFoundCustom/NotFoundCustom";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import AuthProvider from "./context/AuthProvider";
@@ -24,8 +28,20 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
-            <PrivateRoute path="/load">
-              <CustomLoader />
+            <PrivateRoute path="/package/book/:id">
+              <Book />
+            </PrivateRoute>
+            <PrivateRoute path="/add-package">
+              <AddPackage />
+            </PrivateRoute>
+            <PrivateRoute path="/delete-package">
+              <DeletePackage />
+            </PrivateRoute>
+            <PrivateRoute path="/manage-package">
+              <ManageAll />
+            </PrivateRoute>
+            <PrivateRoute path="/my-package">
+              <MyPackage />
             </PrivateRoute>
             <Route path="*">
               <NotFoundCustom />
