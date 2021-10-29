@@ -35,16 +35,15 @@ const HeaderNav = () => {
                   My Package
                 </Nav.Link>
               )}
-              {user && (
-                <Nav.Link as={Link} to="/manage-package">
-                  Manage All
-                </Nav.Link>
-              )}
-              {user && (
-                <Nav.Link as={Link} to="/add-package">
-                  Add Package
-                </Nav.Link>
-              )}
+
+              <Nav.Link as={Link} to="/manage-package">
+                Manage All
+              </Nav.Link>
+
+              <Nav.Link as={Link} to="/add-package">
+                Add Package
+              </Nav.Link>
+
               {user && (
                 <Nav.Link as={Link} to="/delete-package">
                   Delete Package
